@@ -11,13 +11,13 @@ recTimeInSec: 30
 # Camera parameters
 numCams: 1
 cameraMake: "basler"
-cameraSettings: "./configs/rgb24.pfs"
-frameWidth: 1152
-frameHeight: 1024
+cameraSettings: "./configs/daA2448-70um_40318865_brighter.pfs"
+frameWidth: 2472
+frameHeight: 2064
 
 # Compression parameters
 gpuID: -1
-pixelFormatInput: "rgb24"
+pixelFormatInput: "gray"
 pixelFormatOutput: "rgb0"
 quality: 17
 ffmpegLogLevel: "warning"
