@@ -137,7 +137,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-*.mp4
-frametimes.mat
-frametimes.npy
+videos/*
+test/*
+*.mat
+*.npy
 metadata.csv
+*.mp4

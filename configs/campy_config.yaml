@@ -4,16 +4,16 @@
 
 # Recording parameters
 videoFolder: "./test"
-videoFilename: "0.mp4"
-frameRate: 100
+videoFilename: "singlecam1.mp4"
+frameRate: 150
 recTimeInSec: 30
 
 # Camera parameters
 numCams: 1
 cameraMake: "basler"
-cameraSettings: "./configs/daA2448-70um_40318865_brighter.pfs"
-frameWidth: 2472
-frameHeight: 2064
+cameraSettings: "./configs/daA1920-160um_40281170.pfs"
+frameWidth: 1920  
+frameHeight: 1200
 
 # Compression parameters
 gpuID: -1
