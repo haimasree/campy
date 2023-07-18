@@ -42,7 +42,8 @@ def OpenWriter(cam_params, queue):
 						"-bufsize", "20M",
 						"-maxrate", "10M",
 						"-bf:v", "4",
-						"-vsync", "0",]
+						# "-vsync", "0",
+						]
 			if pix_fmt_out == "rgb0" or pix_fmt_out == "bgr0":
 				pix_fmt_out = "yuv420p"
 			if cam_params["codec"] == "h264":
@@ -63,7 +64,7 @@ def OpenWriter(cam_params, queue):
 							"-preset", preset, # set to "fast", "llhp", or "llhq" for h264 or hevc
 							"-qp", quality,
 							"-bf:v", "0",
-							"-vsync", "0",
+							# "-vsync", "0",
 							"-2pass", "0",
 							"-gpu", gpuID,
 							]
@@ -145,7 +146,6 @@ def OpenWriter(cam_params, queue):
 def WriteFrames(cam_params, writeQueue, stopReadQueue, stopWriteQueue):
 	# Start ffmpeg video writer 
 	writer, writing, readQueue = OpenWriter(cam_params, stopReadQueue)
-
 	with QueueKeyboardInterrupt(readQueue):
 		# Write until interrupted and/or stop message received
 		while(writing):

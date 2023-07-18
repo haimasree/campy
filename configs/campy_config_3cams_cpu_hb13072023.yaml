@@ -3,7 +3,7 @@
 
 # Video parameters
 videoFolder: "./videoscpuhb3cam"
-videoFilename: "test_hb_cpu_3cam.mp4"
+videoFilename: "test_hb_cpu_3cam_novsync_h265_q24.mp4"
 frameRate: 150
 recTimeInSec: 120
 
@@ -17,12 +17,12 @@ pixelFormatInput: "gray"
 pixelFormatOutput: "rgb0"
 frameWidth: 1920
 frameHeight: 1200
-
+codec: "h265"
 # Compression parameters
 gpuID: -1
 pixelFormatInput: "gray"
 pixelFormatOutput: "rgb0"
-quality: 17
+quality: 24
 ffmpegLogLevel: "warning"
 
 # Display parameters
