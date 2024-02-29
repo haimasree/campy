@@ -1,14 +1,19 @@
+# This moderate-level config uses the GPU 
+# to compress 3 RGB streams in parallel
+
 # Video parameters
 videoFolder: "./videos"
-videoFilename: "test13_q21.mp4"
+videoFilename: "test11_gpu.mp4"
 frameRate: 150
-recTimeInSec: 10
+recTimeInSec: 2
 
 # Camera parameters
-cameraSelection: [2]                  # If multiple cameras are connected
+numCams: 5
+cameraSelection: [0,1,2,3,4]
+cameraNames: ["Camera1","Camera2","Camera3","Camera4","Camera5"]
 cameraMake: "basler"
 cameraSettings: "./configs/daA1920-160um_40281170.pfs"
-pixelFormatInput: "gray"
+pixelFormatInput: "gray" 
 pixelFormatOutput: "rgb0"
 frameWidth: 1920
 frameHeight: 1200
@@ -16,17 +21,16 @@ frameHeight: 1200
 # Compression parameters
 gpuID: 0                              
 gpuMake: "nvidia"                     # "nvidia", "amd", "intel"                  
-codec: "h264"                         # "h264", "h265", or user-defined video codec
+codec: "h265"                         # "h264", "h265", or user-defined video codec
 quality: 21                           # 0-55
-ffmpegLogLevel: "quiet"               # "quiet", "warning", "info"
+ffmpegLogLevel: "warning"               # "quiet", "warning", "info"
 # ffmpegPath: "/usr/bin/ffmpeg"       # Location of ffmpeg binary if not using Anaconda
 
-
 # Display parameters
-chunkLengthInSec: 5
+chunkLengthInSec: 30
 displayFrameRate: 10
 
-# Trigger parameters
+# Trigger Parameters
 startArduino: True
 serialPort: "COM5"                    # e.g. "COM3" Win; "/dev/ttyACM0" Linux
-digitalPins: [1]
+digitalPins: [0,1,2]

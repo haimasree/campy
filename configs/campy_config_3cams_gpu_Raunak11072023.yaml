@@ -3,9 +3,9 @@
 
 # Video parameters
 videoFolder: "./videos"
-videoFilename: "test6_cpu.mp4"
+videoFilename: "test9_q21_gpu.mp4"
 frameRate: 150
-recTimeInSec: 120
+recTimeInSec: 20
 
 # Camera parameters
 numCams: 3

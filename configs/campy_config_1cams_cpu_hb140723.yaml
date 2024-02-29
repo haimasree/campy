@@ -1,0 +1,31 @@
+# Video parameters
+videoFolder: "./videos"
+videoFilename: "testhbcpu_frontcam.mp4"
+frameRate: 150
+recTimeInSec: 120
+
+# Camera parameters
+cameraSelection: [1]                  # If multiple cameras are connected
+cameraMake: "basler"
+cameraSettings: "./configs/daA1920-160um_40281170.pfs"
+pixelFormatInput: "gray"
+pixelFormatOutput: "rgb0"
+frameWidth: 1920
+frameHeight: 1200
+
+# Compression parameters
+gpuID: -1
+pixelFormatInput: "gray"
+pixelFormatOutput: "rgb0"
+quality: 17
+ffmpegLogLevel: "warning"
+
+
+# Display parameters
+chunkLengthInSec: 30
+displayFrameRate: 10
+
+# Trigger parameters
+startArduino: True
+serialPort: "COM5"                    # e.g. "COM3" Win; "/dev/ttyACM0" Linux
+digitalPins: [1]
